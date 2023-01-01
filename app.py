@@ -101,7 +101,7 @@ def getBooksByGenre(book_Genre):
 @app.route('/filterByPrice', methods=['GET', 'POST'])
 def filterByPrice():
     if request.method == 'GET':
-        return render_template('filterByPrice.html') 
+        return render_template('filterByprice.html') 
 
     else:
         min_entered_price = request.form['priceMin']
