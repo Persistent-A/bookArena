@@ -125,3 +125,6 @@ def deleteBook():
         db.session.delete(data)
         db.session.commit()
         return redirect(url_for('library'))
+
+if __name__ == "__main__":
+    app.run()
