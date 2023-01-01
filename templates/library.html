@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{%block body%}
+
+{% if books %}
+
+    {%for book in books%}
+    <div class="bookInfo">
+        <h3>{{book.title}}</h3>
+        <ul>
+            <li> <span>Author:</span> {{book.author}}</li> 
+            <li><span>Genre:</span> {{book.genre}}</li>
+            <li><span>Description:</span> {{book.description}}</li>
+            <li><span>Price:</span> CAD {{book.price}}</li>
+        </ul>
+    </div>
+    {%endfor%}
+
+{%else%}
+    <p class="errorMessage">No match found related to the entered information. Please Check for Typos and Try Again</p>
+    <!-- <p class="errorMessage"></p> -->
+{%endif%}
+
+{%endblock%}    

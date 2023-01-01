@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block body%}
+
+<form action="/addBook" method="post" class="addBook">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" placeholder="Book Title" required> <br>
+    </div>
+
+    <div>
+        <label for="author">Author:</label>
+        <input type="text" name="author" placeholder="Book Author" required> <br>
+    </div>
+
+    <div>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" placeholder="Book Genre" required> <br>
+    </div>
+    
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" placeholder="Book Price" required min="0"> <br>
+    </div>
+
+    <div>
+        <label for="description" class="descr label">Description:</label>
+        <textarea type="text" name="description" placeholder="Book Description" required></textarea><br>
+    </div>
+
+    <input type="submit" value="ADD" class="addBox">
+</form>
+
+{%endblock%}    

@@ -1,0 +1,21 @@
+{% macro nav()%}
+     <nav>
+        <ul>
+            <li>
+                <a class="active" href="{{url_for('home')}}">HOME</a>
+            </li>
+            <li>
+                <a class="active" href="{{url_for('addBook')}}">ADD A BOOK</a>
+            </li>
+            <li>
+                <a class="active" href="{{url_for('library')}}">LIBRARY</a>
+            </li>
+            <li>
+                <a class="active" href="{{url_for('deleteBook')}}">REMOVE A BOOK</a>
+            </li>
+            <li>
+                <a class="active" href="{{url_for('filterByPrice')}}"><i class="fa-solid fa-filter"></i></a>
+            </li>
+        </ul>
+    </nav>
+{%endmacro%}

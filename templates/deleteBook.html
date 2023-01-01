@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%block body%}
+
+<form action="/deleteBook" method="post" class="deleteForm">
+    
+    <label for="delete">Remove a Book:</label>
+    
+    <div class="deleteNameSection">
+        <input type="text" name="delete" class="deleteName" required>
+        <!-- <input type="submit" value="Delete" class="deleteSubmit"> -->
+        <button class="deleteSubmit">
+            <i class="fa fa-trash" aria-hidden="true" type="submit" ></i>
+            DELETE
+        </button>
+    </div>
+
+</form>
+{%endblock%}

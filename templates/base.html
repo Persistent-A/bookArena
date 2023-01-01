@@ -1,0 +1,38 @@
+{%from 'macros.html' import nav with context%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="https://kit.fontawesome.com/61201149d8.js" crossorigin="anonymous"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{url_for('home')}}" class="logo">
+            <span>bookArena</span>
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" style="color:white"> 
+          <i href="#" class="fa fa-bars"></i> <!-- Used fontawesome to import bars to make hamburger menu -->
+        </label>
+        {{nav()}}
+    </nav>
+    <main>
+        {%block body%} 
+        <form action="/" method="post" class="searchForm">
+            <input type="text" name="search_keyword" min="0" placeholder="Enter title/genre/author" class="searchForm text" required>
+            <input type="submit" value="Search" class="searchForm submit">
+        </form>
+        {%endblock%}
+    </main>
+    <footer>
+        <h3>bookArena</h3>
+        <hr>
+        <h5>&copy; Copyrights reserved</h5>
+    </footer>
+</body>
+</html>
