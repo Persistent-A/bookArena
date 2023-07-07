@@ -4,7 +4,7 @@ from model import Books, db
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books_record.db' #The database URI that should be used for connection.
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # To prevent object modification warnings as wwell as excess memory usage for that.
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # To prevent object modification warnings as well as excess memory usage for that.
 db.init_app(app) # To initialize the application for use with this database setup.
 
 
@@ -47,7 +47,7 @@ def home():
 @app.route('/addBook', methods=('POST', 'GET'))
 def addBook():
     if request.method == 'GET':
-        return render_template('addBook.html', title='This is about Page')
+        return render_template('addBook.html', title='Add books')
     else:
         book_title = request.form['title']
         book_author = request.form['author']

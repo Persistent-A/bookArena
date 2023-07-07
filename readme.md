@@ -5,7 +5,6 @@
             
         Apurva Apurva             -  2030407
     Mineshkumar Dayalbhai Tandel  -  2110050
-    Bhautikbhai Manubhai Diyora   -  2110251
 
 
 
